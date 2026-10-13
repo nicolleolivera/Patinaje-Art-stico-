@@ -1,0 +1,336 @@
+/* Importamos fuentes elegantes para el patinaje artístico */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+/* --- ANIMACIONES --- */
+/* Cambiamos el "shake" (temblor) por un "glide" (deslizamiento suave y elegante) */
+@keyframes glide {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes fade {
+  from { opacity: .4; }
+  to { opacity: 1; }
+}
+
+/* --- CUERPO Y FONDO --- */
+body {
+  /* Degradado suave de rosa palo a azul hielo */
+  background: linear-gradient(135deg, #FDFBFB 0%, #FDE2E4 50%, #D4F1F9 100%);
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #4A4A4A;
+}
+
+/* --- HEADER (Efecto Hielo / Glassmorphism) --- */
+.header {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(212, 165, 165, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 10px 0;
+}
+
+.header .logo {
+  color: #D4A5A5; /* Rosa palo / Oro rosa */
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  font-weight: 400;
+  margin-left: 60px;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  margin-right: 60px;
+  padding: 0;
+}
+
+.header li {
+  transition: transform 0.3s ease;
+}
+
+.header li:hover {
+  animation: glide 1.5s ease-in-out infinite;
+}
+
+.header li .menuitem {
+  color: #5C6B73; /* Gris azulado suave */
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 30px;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.header li .menuitem.active,
+.header li .menuitem:hover {
+  color: #F4ACB7;
+  border-bottom: 2px solid #F4ACB7; /* Rosa pastel */
+}
+
+/* --- SLIDESHOW --- */
+.slideshow {
+  border-radius: 20px; /* Bordes más suaves */
+  padding-top: 90px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.slideshow .slide {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  display: none;
+}
+
+.slideshow .slide:first-child {
+  display: block;
+}
+
+.slideshow .slide img {
+  height: calc(100vh - 130px);
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.slideshow .prev, .slideshow .next {
+  color: white;
+  background: rgba(244, 172, 183, 0.6); /* Rosa translúcido */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 16px;
+  position: absolute;
+  top: 50%;
+  transition: 0.4s ease;
+  width: auto;
+  border-radius: 50%;
+  margin-top: -25px;
+}
+
+.slideshow .prev { left: 20px; }
+.slideshow .next { right: 20px; }
+
+.slideshow .prev:hover, .slideshow .next:hover {
+  background: rgba(212, 165, 165, 0.9);
+}
+
+.slideshow .control {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.slideshow .control .dot {
+  background-color: #E2D1F9; /* Lavanda pastel */
+  border-radius: 50%;
+  cursor: pointer;
+  height: 12px;
+  margin: 0 4px;
+  transition: all 0.4s ease;
+  width: 12px;
+}
+
+.slideshow .control .dot:hover {
+  background-color: #CDB4DB;
+}
+
+.slideshow .control .dot.active {
+  background-color: #F4ACB7;
+  transform: scale(1.2);
+}
+
+/* --- SECCIÓN DEPORTES (Tarjetas) --- */
+.sports {
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.sports:hover {
+  transform: translateY(-10px); /* Efecto de elevación elegante */
+  box-shadow: 0 15px 30px rgba(244, 172, 183, 0.25);
+}
+
+.sports img {
+  border-radius: 20px 20px 0 0;
+  height: 220px;
+  margin-top: 0;
+  object-fit: cover;
+  width: 100%;
+}
+
+.sports h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px 0 15px;
+  text-align: center;
+  color: #5C6B73;
+}
+
+/* --- SECCIÓN MORE --- */
+.more {
+  background: linear-gradient(135deg, #FDE2E4 0%, #E2D1F9 100%); /* Rosa a Lavanda */
+  border-top: 5px solid #F4ACB7;
+  height: auto;
+  min-height: 270px;
+  width: 100%;
+  padding: 40px 0;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.more .title {
+  color: #4A4A4A;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 20px;
+  text-align: center;
+  word-spacing: 5px;
+}
+
+.more .btn {
+  background-color: white;
+  border: 2px solid #F4ACB7;
+  border-radius: 50px;
+  color: #D4A5A5;
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  /* Cambié el margin-left fijo por un centrado real para que sea responsive */
+  margin: 30px auto 0; 
+  padding: 11px 40px;
+  width: auto;
+  min-width: 300px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.more .btn:hover {
+  background-color: #F4ACB7;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* --- SECCIÓN ABOUT --- */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 35px;
+  color: #5C6B73;
+}
+
+.about h2 {
+  font-size: 22px;
+  margin-top: 10px;
+  color: #8D99AE;
+  font-weight: 400;
+}
+
+.about img {
+  border-radius: 50%;
+  height: 200px;
+  object-fit: cover;
+  width: 200px;
+  border: 6px solid white;
+  box-shadow: 0 0 0 4px #F4ACB7, 0 10px 20px rgba(0,0,0,0.1); /* Doble borde pastel */
+  margin: 20px;
+}
+
+/* --- SECCIÓN CONTACTO --- */
+.contact {
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.contact .item {
+  background-color: white;
+  border: 2px solid #E2D1F9; /* Borde lavanda */
+  border-radius: 30px;
+  min-height: 400px;
+  padding: 40px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(226, 209, 249, 0.3);
+}
+
+.contact .item h1 {
+  color: #5C6B73;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.contact .item p {
+  color: #8D99AE;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+}
+
+.contact .item a.fa {
+  color: #F4ACB7; /* Rosa pastel para iconos */
+  font-size: 40px;
+  padding: 20px;
+  text-align: center;
+  width: auto;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.contact .item a.fa:hover {
+  color: #D4A5A5;
+  transform: translateY(-5px);
+}
+
+/* --- BANNER --- */
+.banner {
+  background-color: #FDFBFB;
+  padding: 30px 10px;
+  text-align: center;
+  border-top: 1px solid #E2D1F9;
+}
+
+.banner i {
+  color: #A8D8EA; /* Azul hielo pastel */
+  font-size: 60px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.banner i:hover {
+  color: #F4ACB7;
+  transform: scale(1.1) rotate(5deg);
+}

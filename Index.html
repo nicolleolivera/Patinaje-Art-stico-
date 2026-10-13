@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEHPAT - Patinaje Artístico</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px; 
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Lobster|Oswald|Pacifico|Roboto+Slab" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <div class="header py-2">
+      <span class="logo">Patinaje Artístico</span>
+      <ul>
+        <li><a class="menuitem active" href="#home">Inicio</a></li>
+        <li><a class="menuitem" href="#more">Inf del patinaje</a></li>
+        <li><a class="menuitem" href="#about">Mejores Patinadores</a></li>
+        <li><a class="menuitem" href="#acerca-de-mi">Acerca de mí</a></li>
+      </ul>
+    </div>
+
+    <!-- SECCIÓN INICIO (SOLO VIDEO) -->
+    <div id="home">
+      <div class="video-container" style="width: 100%; max-height: 600px; overflow: hidden; position: relative; background-color: #000;">
+        <video autoplay muted loop playsinline controls style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <source src="imagenes/video.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de videos. Por favor, actualiza tu navegador.
+        </video>
+      </div>
+    </div>
+
+    <!-- SECCIÓN INFORMACIÓN DEL PATINAJE -->
+    <div class="more" id="more">
+      <p class="title">TODO SOBRE EL PATINAJE ARTÍSTICO ESTÁ AQUÍ...</p>
+<a class="btn" href="info_patinaje.html">
+  Descubre más sobre el Patinaje Artístico
+</a>
+    </div>
+
+    <!-- SECCIÓN MEJORES PATINADORES -->
+    <div class="about" id="about">
+      <h1 class="my-5 text-center">Algunos De Los Mejores Patinadores Artísticos</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img src="imagenes/1.JPEG" alt="Ilía Malinin" style="width:200px; height:200px; border-radius:50%; object-fit:cover; margin-bottom:15px;" />
+            <h2>Ilía Malinin</h2>
+            <p><strong>Estados Unidos</strong></p>
+            <p class="text-muted">Conocido como el "Dios del Cuádruple", es el primer patinador en realizar con éxito el cuádruple Axel en competencia y múltiples saltos cuádruples.</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="imagenes/2.JPEG" alt="Kaori Sakamoto" style="width:200px; height:200px; border-radius:50%; object-fit:cover; margin-bottom:15px;" />
+            <h2>Kaori Sakamoto</h2>
+            <p><strong>Japón</strong></p>
+            <p class="text-muted">Campeona mundial y una de las patinadoras más consistentes y potentes del circuito internacional actual.</p>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-6 text-center">
+            <img src="imagenes/3.JPEG" alt="Yuzuru Hanyu" style="width:200px; height:200px; border-radius:50%; object-fit:cover; margin-bottom:15px;" />
+            <h2>Yuzuru Hanyu</h2>
+            <p><strong>Japón</strong></p>
+            <p class="text-muted">Bicampeón olímpico y leyenda histórica, considerado uno de los patinadores más completos y artísticos de todos los tiempos.</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="imagenes/4.JPEG" alt="Nathan Chen" style="width:200px; height:200px; border-radius:50%; object-fit:cover; margin-bottom:15px;" />
+            <h2>Nathan Chen</h2>
+            <p><strong>Estados Unidos</strong></p>
+            <p class="text-muted">Campeón olímpico y dominador absoluto del ciclo olímpico con una capacidad técnica sobresaliente en saltos cuádruples.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN ACERCA DE MÍ -->
+    <div class="acerca-de-mi" id="acerca-de-mi" style="background-color: #f8f9fa; padding: 60px 0;">
+      <h1 class="my-4 text-center">Conoce a la Creadora</h1>
+      <div class="container text-center">
+        <h2>Emely Nicolle Olivera Hernandez</h2>
+        <p class="text-muted">Creadora de este sitio web</p>
+        
+        <div class="mt-4">
+          <a href="https://www.instagram.com/emely_oliveraa?stkn=MWZpOXA5amthdHU3MQ%3D%3D&utm_source=qr" target="_blank" class="fa fa-instagram fa-2x mx-3" title="Mi Instagram" style="color: #E1306C;"></a>
+          <a href="https://www.facebook.com/share/1DnhyJ25HJ/?mibextid=wwXIfr" target="_blank" class="fa fa-facebook fa-2x mx-3" title="Mi Facebook" style="color: #3b5998;"></a>
+        </div>
+      </div>
+    </div>
+
+    <section class="banner">
+      <i class="fa fa-rocket" aria-hidden="true"></i>
+      <h1>Un placer servirte sobre ruedas</h1>
+    </section>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
